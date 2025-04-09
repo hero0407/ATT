@@ -22,11 +22,7 @@ public class week11{
        
 		        WebElement MobileNum=driver.findElement(By.xpath("//*[@id=\"reactPageContent\"]/div/div/div[2]/div[2]/div[1]/input"));
 		        MobileNum.sendKeys("9686548596");
-		        Thread.sleep(100000);
-		        		        
-		        WebElement registerbtn=driver.findElement(By.className("submitBottomOption"));
-		        registerbtn.click();
-		        Thread.sleep(20000);
+		        Thread.sleep(1000);
 		         
 		        WebElement registerbtnn=driver.findElement(By.className("submitBottomOption"));
 		        registerbtnn.click();
