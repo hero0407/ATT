@@ -26,7 +26,7 @@ public class week11{
 		         
 		        WebElement registerbtnn=driver.findElement(By.className("submitBottomOption"));
 		        registerbtnn.click();
-		        Thread.sleep(20000);
+		        Thread.sleep(2000);
 		        
 		        WebElement otp1=driver.findElement(By.xpath("otp1"));
 		        otp1.sendKeys("5"); 	
