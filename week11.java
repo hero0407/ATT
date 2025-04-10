@@ -1,4 +1,3 @@
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -10,40 +9,37 @@ public class week11{
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.myntra.com/");
-        WebElement register=driver.findElement(By.xpath("/html/body/div[1]/div/div/header/div[2]/div[2]/div/div[1]/span[1]"));
-        register.click();
-        
-        WebElement signup=driver.findElement(By.xpath("//*[@id=\"desktop-header-cnt\"]/div[2]/div[2]/div/div[2]"));
-        signup.click();
-        
-        WebElement login=driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/div[2]/div/div/div[2]/button"));
-        login.click();
-        
+        Actions actions=new Actions(driver);
+		WebElement profile=driver.findElement(By.xpath("/html/body/div[1]/div/div/header/div[2]/div[2]/div/div[1]/span[2]"));
+		actions .moveToElement(profile).build().perform();
+		WebElement signup=driver.findElement(By.xpath("//*[@id=\"desktop-header-cnt\"]/div[2]/div[2]/div/div[2]/div[2]/div[2]/div[1]/a"));
+		signup.click();
+		Thread.sleep(1000);
        
 		        WebElement MobileNum=driver.findElement(By.xpath("//*[@id=\"reactPageContent\"]/div/div/div[2]/div[2]/div[1]/input"));
-		        MobileNum.sendKeys("9686548596");
+		        MobileNum.sendKeys("9686548597");
 		        Thread.sleep(1000);
-		         
-		        WebElement registerbtnn=driver.findElement(By.className("submitBottomOption"));
-		        registerbtnn.click();
-		        Thread.sleep(2000);
+		        		        
+		        WebElement registerbtn=driver.findElement(By.xpath("//*[@id=\"reactPageContent\"]/div/div/div[2]/div[2]/div[3]"));
+		        registerbtn.click();
+		        Thread.sleep(30000);
+		        registerbtn.click();
 		        
-		        WebElement otp1=driver.findElement(By.xpath("otp1"));
+		        WebElement otp1=driver.findElement(By.xpath("//*[@id=\"reactPageContent\"]/div/div[2]/div[1]/input[1]"));
 		        otp1.sendKeys("5"); 	
 		        Thread.sleep(100);
 		        
-		        WebElement otp2=driver.findElement(By.xpath("otp2"));
+		        WebElement otp2=driver.findElement(By.xpath("//*[@id=\"reactPageContent\"]/div/div[2]/div[1]/input[2]"));
 		        otp2.sendKeys("5"); 	
 		        Thread.sleep(100);
 		        
-		        WebElement otp3=driver.findElement(By.xpath("otp3"));
+		        WebElement otp3=driver.findElement(By.xpath("//*[@id=\"reactPageContent\"]/div/div[2]/div[1]/input[3]"));
 		        otp3.sendKeys("4"); 	
-		        Thread.sleep(100);
-		        
-		        WebElement otp4=driver.findElement(By.xpath("otp4"));
+		        Thread.sleep(100);	        
+		        WebElement otp4=driver.findElement(By.xpath("//*[@id=\"reactPageContent\"]/div/div[2]/div[1]/input[4]"));
 		        otp4.sendKeys("8"); 	
 		        Thread.sleep(100);
-		       
+		        
 		        
 		        
 		        }
