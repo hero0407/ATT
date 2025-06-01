@@ -19,6 +19,8 @@ public class week11{
 		        WebElement MobileNum=driver.findElement(By.xpath("//*[@id=\"reactPageContent\"]/div/div/div[2]/div[2]/div[1]/input"));
 		        MobileNum.sendKeys("9686548597");
 		        Thread.sleep(1000);
+		        
+		        driver.findElement(By.xpath("//*[@id=\"reactPageContent\"]/div/div/div[2]/div[2]/div[2]/input")).click();
 		        		        
 		        WebElement registerbtn=driver.findElement(By.xpath("//*[@id=\"reactPageContent\"]/div/div/div[2]/div[2]/div[3]"));
 		        registerbtn.click();
@@ -35,7 +37,8 @@ public class week11{
 		        
 		        WebElement otp3=driver.findElement(By.xpath("//*[@id=\"reactPageContent\"]/div/div[2]/div[1]/input[3]"));
 		        otp3.sendKeys("4"); 	
-		        Thread.sleep(100);	        
+		        Thread.sleep(100);	    
+		        
 		        WebElement otp4=driver.findElement(By.xpath("//*[@id=\"reactPageContent\"]/div/div[2]/div[1]/input[4]"));
 		        otp4.sendKeys("8"); 	
 		        Thread.sleep(100);
